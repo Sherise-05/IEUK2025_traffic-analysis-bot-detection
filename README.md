@@ -17,7 +17,7 @@ This project investigates abnormal traffic patterns in a sample server log file 
 
 ---
 
-## 🚀 How to Run the Script
+## How to Run the Script
 
 ### 1. Set up a virtual environment (optional but recommended)
 ```
