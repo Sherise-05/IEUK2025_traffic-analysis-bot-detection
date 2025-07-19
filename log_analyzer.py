@@ -59,6 +59,12 @@ def analyze_log(file_path):
     for ip in sorted(suspicious_ips):  # Sorted for consistent order
         print(ip)
 
+    # Save suspicious IPs to blocklist file
+    with open("blocklist.txt", "w") as f:
+        for ip in sorted(suspicious_ips):
+            f.write(ip + "\n")
+    print("\n Blocklist saved as 'blocklist.txt'")
+
     # Detect high request rate per second
     print("\n IPs with high request rates (>5 reqs/sec):")
     for ip, time_counts in ip_rate.items():
